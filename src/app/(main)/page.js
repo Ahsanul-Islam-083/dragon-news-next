@@ -1,7 +1,12 @@
-import Image from "next/image";
+import { redirect } from "next/navigation";
 
-export default function Home() {
-  return (
-    <h2 className="text-red-500">Hom Page</h2>
-  );
+
+const default_category_id = "01";
+
+const Home = async () => {
+
+  redirect(`/category/${default_category_id}`);
+
 }
+
+export default Home;

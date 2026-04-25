@@ -1,11 +1,29 @@
 import React from 'react';
 import Marquee from 'react-fast-marquee';
 
+const news = [
+    {
+        _id: "1",
+        title: "Breaking News: Major Event Unfolds in the City",
+    },
+    {
+        _id: "2",
+        title: "Breaking News: New Policy Announced by the Government",
+    },
+    {
+        _id: "3",
+        title: "Breaking News: Sports Team Wins Championship",
+    },
+];
+
 const BreakingNews = () => {
     return (
-        <div>
-            <Marquee pauseOnHover="true">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti, impedit? Architecto impedit ex repellat voluptatum sequi dolorem molestias velit quasi!
+        <div className='flex justify-between gap-4 items-center bg-gray-200 py-4 px-2 container mx-auto'>
+            <button className='btn btn-error text-white'>Latest News</button>
+            <Marquee pauseOnHover={true} speed={100}>
+                {news.map((n) => (
+                    <span className='mr-10' key={n._id}>{n.title}</span>
+                ))}
             </Marquee>
         </div>
     );
