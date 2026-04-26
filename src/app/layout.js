@@ -1,3 +1,9 @@
+/**
+ * if after setting (0.0.0.0/0) this through error then follow these
+ * import dns from "node:dns";
+ * dns.setServers(['8.8.8.8', '8.8.4.4']);
+*/
+
 import { Geist, Geist_Mono, Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 
